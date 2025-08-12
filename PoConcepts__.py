@@ -354,10 +354,10 @@
 # ner = pipeline("ner", model="dslim/bert-base-NER", aggregation_strategy="simple")
 
 # # LLM config
-# USE_OPENAI = bool(os.getenv("AIzaSyBGnhsxVtbSSxrTV6dfy2P0GrAc-XnpqII"))
+# USE_OPENAI = bool(os.getenv("Openai API Key"))
 # if USE_OPENAI:
 #     import openai
-#     openai.api_key = os.getenv("AIzaSyBGnhsxVtbSSxrTV6dfy2P0GrAc-XnpqII")
+#     openai.api_key = os.getenv("Openai API Key")
 # else:
 #     # local generator fallback (CPU)
 #     from transformers import AutoTokenizer, AutoModelForSeq2SeqLM, pipeline as hf_pipeline
@@ -1191,5 +1191,6 @@ for uploaded in uploaded_files:
             st.warning(f"Unsupported file type: {ext}")
     finally:
         os.unlink(tmp_path)
+
 
 # st.markdown("---")
